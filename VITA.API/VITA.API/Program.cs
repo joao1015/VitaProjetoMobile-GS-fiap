@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿// Program.cs
+
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -11,7 +13,9 @@ var builder = WebApplication.CreateBuilder(args);
 /*--------------------------------------------------
 | 1. CONFIGURAÇÃO DE BANCO (In-Memory) + IDENTITY  |
 --------------------------------------------------*/
-builder.Services.AddDbContext<VitaContext>(o => o.UseInMemoryDatabase("vita"));
+builder.Services.AddDbContext<VitaContext>(options =>
+    options.UseInMemoryDatabase("vita"));
+
 builder.Services.AddIdentityCore<ApplicationUser>()
                 .AddEntityFrameworkStores<VitaContext>();
 
@@ -20,9 +24,9 @@ builder.Services.AddIdentityCore<ApplicationUser>()
 --------------------------------------------------*/
 string jwtKey = builder.Configuration["JwtKey"] ?? "super-secret-key-123456";
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(o =>
+    .AddJwtBearer(options =>
     {
-        o.TokenValidationParameters = new TokenValidationParameters
+        options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = false,
             ValidateAudience = false,
@@ -35,16 +39,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 /*--------------------------------------------------
 | 3. CORS (origens de desenvolvimento)             |
 --------------------------------------------------*/
-builder.Services.AddCors(opt =>
+// Nesta configuração, aceitamos qualquer host:porta e ainda permitimos credenciais.
+builder.Services.AddCors(options =>
 {
-    opt.AddPolicy("dev", p => p
-        .WithOrigins(
-            "http://localhost:8081",   // Expo Web / Metro
-            "http://10.0.2.2:5055",   // Emulador Android → API sem HTTPS
-            "http://localhost:5055")  // Navegador desktop
+    options.AddPolicy("dev", policy => policy
+        .SetIsOriginAllowed(origin => true) // aceita qualquer origem (host + porta)
         .AllowAnyHeader()
         .AllowAnyMethod()
-        .AllowCredentials());
+        .AllowCredentials()                // permite enviar cookies/Auth headers
+    );
 });
 
 /*--------------------------------------------------
@@ -55,23 +58,24 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var app = builder.Build();
+
 /*--------------------------------------------------
 | 5. APP PIPELINE                                  |
 --------------------------------------------------*/
-var app = builder.Build();
 
-// Swagger sempre disponível em dev; em prod opcional
+// Swagger sempre disponível em desenvolvimento
 app.UseSwagger();
 app.UseSwaggerUI();
 
 if (!app.Environment.IsDevelopment())
 {
-    // Em produção mantenha HTTPS
+    // Em produção, forçar HTTPS
     app.UseHttpsRedirection();
 }
 else
 {
-    // Em dev aceita HTTP e habilita CORS amplo
+    // Em desenvolvimento, habilitar CORS amplo
     app.UseCors("dev");
 }
 
