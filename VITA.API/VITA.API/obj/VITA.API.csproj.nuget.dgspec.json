@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\morei\\source\\repos\\VITA\\VITA.API\\VITA.API\\VITA.API.csproj": {}
+    "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\VITA.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\morei\\source\\repos\\VITA\\VITA.API\\VITA.API\\VITA.API.csproj": {
+    "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\VITA.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\morei\\source\\repos\\VITA\\VITA.API\\VITA.API\\VITA.API.csproj",
+        "projectUniqueName": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\VITA.API.csproj",
         "projectName": "VITA.API",
-        "projectPath": "C:\\Users\\morei\\source\\repos\\VITA\\VITA.API\\VITA.API\\VITA.API.csproj",
+        "projectPath": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\VITA.API.csproj",
         "packagesPath": "C:\\Users\\morei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\morei\\source\\repos\\VITA\\VITA.API\\VITA.API\\obj\\",
+        "outputPath": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

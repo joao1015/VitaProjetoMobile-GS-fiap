@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uMXLVtnaeCY=",
+  "dgSpecHash": "2fCsHxr+Oo8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\morei\\source\\repos\\VITA\\VITA.API\\VITA.API\\VITA.API.csproj",
+  "projectFilePath": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\VITA.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\morei\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\morei\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.15\\microsoft.aspnetcore.authentication.jwtbearer.8.0.15.nupkg.sha512",
