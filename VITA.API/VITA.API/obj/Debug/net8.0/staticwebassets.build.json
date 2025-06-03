@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "sWk4Z0YGuwMmgTG+H3uOsTH4lKaPDiV9Vvin3D+3edg=",
+  "Source": "VITA.API",
+  "BasePath": "_content/VITA.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

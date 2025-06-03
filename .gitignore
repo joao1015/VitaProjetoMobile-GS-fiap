@@ -1,0 +1,33 @@
+# --------------------
+# Backend .NET (VITA.API)
+# --------------------
+VITA.API/bin/
+VITA.API/obj/
+VITA.API/*.user
+VITA.API/.vs/
+
+# --------------------
+# Node / Expo (VITA.App)
+# --------------------
+VITA.App/node_modules/
+VITA.App/.expo/
+VITA.App/android/app/build/
+VITA.App/ios/Pods/
+VITA.App/ios/build/
+VITA.App/npm-debug.log*
+VITA.App/yarn-error.log*
+VITA.App/*.log
+VITA.App/package-lock.json
+VITA.App/yarn.lock
+
+# --------------------
+# Arquivos de ambiente
+# --------------------
+*.env
+VITA.App/*.env*
+
+# --------------------
+# Qualquer pasta .vs em subníveis
+# --------------------
+**/.vs/
+**/.vs/**
