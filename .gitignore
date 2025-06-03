@@ -6,28 +6,40 @@ VITA.API/obj/
 VITA.API/*.user
 VITA.API/.vs/
 
-# --------------------
-# Node / Expo (VITA.App)
-# --------------------
-VITA.App/node_modules/
-VITA.App/.expo/
-VITA.App/android/app/build/
-VITA.App/ios/Pods/
-VITA.App/ios/build/
-VITA.App/npm-debug.log*
-VITA.App/yarn-error.log*
-VITA.App/*.log
-VITA.App/package-lock.json
-VITA.App/yarn.lock
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# --------------------
-# Arquivos de ambiente
-# --------------------
-*.env
-VITA.App/*.env*
+# dependencies
+node_modules/
 
-# --------------------
-# Qualquer pasta .vs em subníveis
-# --------------------
-**/.vs/
-**/.vs/**
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
