@@ -1,83 +1,63 @@
-// src/screens/LoginScreen.tsx
-
 import React, { useState, useContext } from 'react';
 import {
   View,
-  TextInput,
   Text,
+  TextInput,
   TouchableOpacity,
   Alert,
   StyleSheet,
-  Platform,
+  ActivityIndicator,
 } from 'react-native';
-import { login } from '../services/auth';
 import { AuthContext } from '../contexts/AuthContext';
+import { login } from '../services/auth';
 import { Colors, Spacing, Typography } from '../styles/theme';
 
-export default function LoginScreen({ navigation }: any) {
+export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [pwd, setPwd] = useState('');
+  const [loading, setLoading] = useState(false);
   const { setToken } = useContext(AuthContext);
 
-  const handle = async () => {
+  const handleLogin = async () => {
     if (!email.trim() || !pwd.trim()) {
-      Alert.alert('Erro', 'Por favor, preencha e-mail e senha.');
+      Alert.alert('Campos obrigatórios', 'Informe e-mail e senha.');
       return;
     }
+
     try {
-      const token = await login(email, pwd);
+      setLoading(true);
+    const token = await login(email, pwd); // ✅ Passando email e senha corretamente
+
       setToken(token);
-      // O RootNavigator detecta token ≠ null e muda para MainStack automaticamente
-    } catch (err: any) {
-      if (err.response) {
-        if (err.response.status === 401) {
-          Alert.alert('Credenciais inválidas', 'Usuário não cadastrado ou senha incorreta.');
-        } else if (err.response.status === 400) {
-          // Supondo que o backend envie objeto { message: '...' } ou ModelState
-          const serverMsg =
-            err.response.data?.message ||
-            'Senha fora do padrão. Verifique requisitos.';
-          Alert.alert('Erro de validação', serverMsg);
-        } else {
-          Alert.alert('Erro', 'Não foi possível fazer login. Tente novamente mais tarde.');
-        }
-      } else {
-        Alert.alert('Erro de conexão', 'Não foi possível conectar ao servidor.');
-      }
+    } catch {
+      Alert.alert('Erro', 'Falha ao fazer login. Verifique as credenciais.');
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Entrar no VITA</Text>
-
+      <Text style={styles.title}>Login</Text>
       <TextInput
         style={styles.input}
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
+        placeholder="E-mail"
         autoCapitalize="none"
         keyboardType="email-address"
-        placeholderTextColor={Colors.textSecondary}
+        onChangeText={setEmail}
       />
-
       <TextInput
         style={styles.input}
         placeholder="Senha"
-        value={pwd}
-        onChangeText={setPwd}
         secureTextEntry
-        placeholderTextColor={Colors.textSecondary}
+        onChangeText={setPwd}
       />
-
-      <TouchableOpacity style={styles.button} onPress={handle}>
-        <Text style={styles.buttonText}>Entrar</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-        <Text style={[Typography.caption, { color: Colors.primary, marginTop: Spacing(2) }]}>
-          Ainda não tem conta? Cadastre-se aqui.
-        </Text>
+      <TouchableOpacity style={styles.button} onPress={handleLogin} disabled={loading}>
+        {loading ? (
+          <ActivityIndicator color="#fff" />
+        ) : (
+          <Text style={styles.buttonText}>Entrar</Text>
+        )}
       </TouchableOpacity>
     </View>
   );
@@ -87,32 +67,29 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    padding: Spacing(6),
-    backgroundColor: Colors.surface,
+    padding: Spacing(4),
+    backgroundColor: Colors.surfaceAlt,
   },
   title: {
-    ...Typography.h1,
-    marginBottom: Spacing(6),
+    ...Typography.h2,
     textAlign: 'center',
+    marginBottom: Spacing(4),
   },
   input: {
     borderWidth: 1,
-    borderColor: Colors.textSecondary,
+    borderColor: Colors.primary,
     borderRadius: 8,
-    padding: Spacing(3),
+    padding: Spacing(2),
     marginBottom: Spacing(3),
-    fontSize: 16,
-    color: Colors.textPrimary,
   },
   button: {
     backgroundColor: Colors.primary,
-    paddingVertical: Spacing(3),
+    padding: Spacing(2),
     borderRadius: 8,
     alignItems: 'center',
   },
   buttonText: {
     color: '#fff',
-    fontSize: 16,
     fontWeight: '600',
   },
 });

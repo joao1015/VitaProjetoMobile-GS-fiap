@@ -9,7 +9,7 @@ if (Platform.OS === 'web') {
   MapNearbyScreen = require('./MapNearbyScreen.web').default;
 } else {
   // Quando for mobile (Android ou iOS), use a variante “.native.tsx”
-  MapNearbyScreen = require('./MapNearbyScreen.native').default;
+  MapNearbyScreen = require('./MapNearbyScreen.web').default;
 }
 
 export default MapNearbyScreen;

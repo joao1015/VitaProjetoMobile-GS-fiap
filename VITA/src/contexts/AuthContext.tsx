@@ -1,68 +1,70 @@
-// src/contexts/AuthContext.tsx
-
 import React, { createContext, useState, useEffect, ReactNode } from 'react';
-import { View, ActivityIndicator, Platform } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
+import { Platform } from 'react-native';
 
-interface AuthContextData {
+interface AuthContextType {
   token: string | null;
   setToken: (token: string | null) => void;
+  logoutUser: () => void;
 }
 
-export const AuthContext = createContext<AuthContextData>({
+export const AuthContext = createContext<AuthContextType>({
   token: null,
   setToken: () => {},
+  logoutUser: () => {},
 });
 
-export function AuthProvider({ children }: { children: ReactNode }) {
+interface Props {
+  children: ReactNode;
+}
+
+export function AuthProvider({ children }: Props) {
   const [token, setTokenState] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
 
-  const loadToken = async (): Promise<string | null> => {
-    if (Platform.OS === 'web') {
-      return localStorage.getItem('token');
-    } else {
-      return await SecureStore.getItemAsync('token');
-    }
-  };
-
-  const storeToken = async (newToken: string | null) => {
-    if (Platform.OS === 'web') {
-      if (newToken) localStorage.setItem('token', newToken);
-      else localStorage.removeItem('token');
-    } else {
-      if (newToken) await SecureStore.setItemAsync('token', newToken);
-      else await SecureStore.deleteItemAsync('token');
-    }
-  };
-
+  // 🔐 Carregar token salvo
   useEffect(() => {
-    (async () => {
-      const stored = await loadToken();
-      console.log('🔍 AuthProvider: token lido do storage =', stored);
-      if (stored) {
-        setTokenState(stored);
+    const loadToken = async () => {
+      const storedToken = Platform.OS === 'web'
+        ? localStorage.getItem('token')
+        : await SecureStore.getItemAsync('token');
+      console.log('🔍 AuthProvider: token lido do storage =', storedToken);
+      if (storedToken) {
+        setTokenState(storedToken);
       }
-      setLoading(false);
-    })();
+    };
+    loadToken();
   }, []);
 
+  // 🔐 Salvar token no storage
   const setToken = async (newToken: string | null) => {
     console.log('✏️ AuthProvider: setToken chamado com =', newToken);
-    await storeToken(newToken);
+
     setTokenState(newToken);
+
+    if (!newToken) {
+      if (Platform.OS === 'web') {
+        localStorage.removeItem('token');
+      } else {
+        await SecureStore.deleteItemAsync('token');
+      }
+      return;
+    }
+
+    if (Platform.OS === 'web') {
+      localStorage.setItem('token', newToken);
+    } else {
+      await SecureStore.setItemAsync('token', newToken);
+    }
   };
 
-  if (loading) {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <ActivityIndicator size="large" color="#007bff" />
-      </View>
-    );
-  }
+  // 🔓 Logout
+  const logoutUser = async () => {
+    console.log('🚪 Logout executado');
+    await setToken(null);
+  };
 
   return (
-    <AuthContext.Provider value={{ token, setToken }}>
+    <AuthContext.Provider value={{ token, setToken, logoutUser }}>
       {children}
     </AuthContext.Provider>
   );

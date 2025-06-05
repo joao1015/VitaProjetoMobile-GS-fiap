@@ -18,13 +18,34 @@ public class AuthController : ControllerBase
 
     public record Cred(string Email, string Password);
 
+
     [HttpPost("register")]
     public async Task<IActionResult> Register(Cred c)
     {
         var u = new ApplicationUser { UserName = c.Email, Email = c.Email };
         var r = await _um.CreateAsync(u, c.Password);
-        return r.Succeeded ? Ok() : BadRequest(r.Errors);
+        if (!r.Succeeded)
+            return BadRequest(r.Errors);
+
+        // Recarrega o usuário do banco para garantir que o ID está populado
+        u = await _um.FindByEmailAsync(c.Email);
+
+        // Gera token
+        var token = new JwtSecurityTokenHandler().WriteToken(
+            new JwtSecurityToken(
+                claims: new[] {
+                new Claim(JwtRegisteredClaimNames.Sub, u.Id),
+                new Claim(JwtRegisteredClaimNames.Email, u.Email!)
+                },
+                expires: DateTime.UtcNow.AddHours(2),
+                signingCredentials: new SigningCredentials(
+                    new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_key)),
+                    SecurityAlgorithms.HmacSha256)));
+
+        return Ok(new { token });
     }
+
+
 
     [HttpPost("login")]
     public async Task<IActionResult> Login(Cred c)

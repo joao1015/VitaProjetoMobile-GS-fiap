@@ -1,10 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\morei\\source\\repos\\VITA\\VITA.API\\VITA.API\\",
+  "WorkspaceRootPath": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\morei\\source\\repos\\VITA\\VITA.API\\VITA.API\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{783D98F0-6093-9679-6F52-AAD50B882B20}|VITA.API.csproj|c:\\users\\morei\\source\\repos\\vita\\vitaprojetomobile-gs-fiap\\vita.api\\vita.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{783D98F0-6093-9679-6F52-AAD50B882B20}|VITA.API.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{783D98F0-6093-9679-6F52-AAD50B882B20}|VITA.API.csproj|c:\\users\\morei\\source\\repos\\vita\\vitaprojetomobile-gs-fiap\\vita.api\\vita.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{783D98F0-6093-9679-6F52-AAD50B882B20}|VITA.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{783D98F0-6093-9679-6F52-AAD50B882B20}|VITA.API.csproj|c:\\users\\morei\\source\\repos\\vita\\vitaprojetomobile-gs-fiap\\vita.api\\vita.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{783D98F0-6093-9679-6F52-AAD50B882B20}|VITA.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{783D98F0-6093-9679-6F52-AAD50B882B20}|VITA.API.csproj|c:\\users\\morei\\source\\repos\\vita\\vitaprojetomobile-gs-fiap\\vita.api\\vita.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{783D98F0-6093-9679-6F52-AAD50B882B20}|VITA.API.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{783D98F0-6093-9679-6F52-AAD50B882B20}|VITA.API.csproj|c:\\users\\morei\\source\\repos\\vita\\vitaprojetomobile-gs-fiap\\vita.api\\vita.api\\vita.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{783D98F0-6093-9679-6F52-AAD50B882B20}|VITA.API.csproj|solutionrelative:vita.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{783D98F0-6093-9679-6F52-AAD50B882B20}|VITA.API.csproj|c:\\users\\morei\\source\\repos\\vita\\vitaprojetomobile-gs-fiap\\vita.api\\vita.api\\vita.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{783D98F0-6093-9679-6F52-AAD50B882B20}|VITA.API.csproj|solutionrelative:vita.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +34,79 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\morei\\source\\repos\\VITA\\VITA.API\\VITA.API\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\morei\\source\\repos\\VITA\\VITA.API\\VITA.API\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwCQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:11:52.544Z",
+              "WhenOpened": "2025-06-04T21:29:25.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-04T20:58:16.483Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VITA.API",
+              "DocumentMoniker": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\VITA.API.csproj",
+              "RelativeDocumentMoniker": "VITA.API.csproj",
+              "ToolTip": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\VITA.API.csproj",
+              "RelativeToolTip": "VITA.API.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-04T20:58:10.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-04T20:58:02.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T20:54:32.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VITA.API.csproj",
+              "DocumentMoniker": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\VITA.API.csproj",
+              "RelativeDocumentMoniker": "VITA.API.csproj",
+              "ToolTip": "C:\\Users\\morei\\source\\repos\\VITA\\VitaProjetoMobile-GS-fiap\\VITA.API\\VITA.API\\VITA.API.csproj",
+              "RelativeToolTip": "VITA.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-04T20:47:51.726Z"
             }
           ]
         }
