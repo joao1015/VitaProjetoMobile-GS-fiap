@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import StartScreen from '../screens/StartScreen';
-import LoginScreen from '../screens/LoginScreen';
-import RegisterScreen from '../screens/RegisterScreen';
+import StartScreen from '../telas/StartScreen';
+import LoginScreen from '../telas/TelaLogar';
+import RegisterScreen from '../telas/RegisterScreen';
 
 export type AuthStackParamList = {
   Start: undefined;

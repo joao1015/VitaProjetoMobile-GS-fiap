@@ -14,7 +14,7 @@ import {
 import { updateReport } from '../services/api';
 import { Colors, Spacing, Typography } from '../styles/theme';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { MainStackParamList } from '../navigation/MainStack';
+import { MainStackParamList } from '../navegação/MainStack';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 type Props = NativeStackScreenProps<MainStackParamList, 'EditarRelato'>;
