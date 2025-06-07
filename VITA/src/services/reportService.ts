@@ -1,5 +1,5 @@
 // src/services/reportService.ts
-import { api } from "./api"; // já configurado em src/services/api.ts
+import { api } from "./api"; 
 
 export interface Report {
   id?: number;

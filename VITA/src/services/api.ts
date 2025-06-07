@@ -3,11 +3,7 @@ import axios from 'axios';
 import { Platform } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
 
-// Detecta automaticamente o IP base dependendo do ambiente
-const baseURL =
-  Platform.OS === 'android'
-    ? 'http://10.0.2.2:5055/api' // Emulador Android
-    : 'http://172.20.10.13:5055/api'; // Celular físico ou Web (substitua pelo IP da sua máquina)
+const baseURL = 'http://191.234.177.200:5055/api'; // IP público da VM
 
 // Criação do cliente Axios
 export const api = axios.create({ baseURL });

@@ -26,7 +26,10 @@ export default function HomeScreen() {
         Bem-vindo ao <Text style={{ color: Colors.primary }}>VITA</Text>!
       </Text>
       <Text style={styles.subtitle}>
-        Você pode visualizar o mapa da sua região, enviar um novo evento ou consultar alertas ativos.
+        <Text style={{ fontWeight: 'bold', color: Colors.primary }}>VITA</Text>: Juntos contra eventos extremos.{"\n"}
+        Reporte enchentes, queimadas e outros riscos na sua região.{"\n"}
+        Ganhe pontos, veja eventos próximos e ajude sua comunidade.{"\n"}
+        Seus dados ajudam a prevenir desastres com inteligência artificial!
       </Text>
 
       <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Report')}>

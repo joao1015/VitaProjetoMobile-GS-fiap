@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
   Alert,
 } from 'react-native';
-import { useFocusEffect } from '@react-navigation/native';
+import { useFocusEffect, useRoute } from '@react-navigation/native';
 import { getUserReports, deleteReport, Report } from '../services/api';
 import { AuthContext } from '../contexts/AuthContext';
 import { Colors, Spacing, Typography } from '../styles/theme';
@@ -19,6 +19,8 @@ export default function UserReportsScreen({ navigation }: any) {
   const { token } = useContext(AuthContext);
   const [reports, setReports] = useState<Report[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const currentRoute = useRoute();
 
   // Busca GET /api/Reports/me
   const fetchMyReports = async () => {
@@ -45,6 +47,18 @@ export default function UserReportsScreen({ navigation }: any) {
         setLoading(false);
       }
     }, [token])
+  );
+
+  // ALERTA de edição com sucesso ao voltar da tela de edição
+  useFocusEffect(
+    useCallback(() => {
+      // @ts-ignore
+      if (currentRoute.params?.edited) {
+        Alert.alert('Sucesso', 'Relato editado com sucesso!');
+        // Limpa o param para não mostrar de novo
+        navigation.setParams({ edited: undefined });
+      }
+    }, [currentRoute.params])
   );
 
   const handleDelete = (id: number) => {

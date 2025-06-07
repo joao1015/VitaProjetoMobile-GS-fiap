@@ -1,4 +1,4 @@
-/* Paleta azul & helpers */
+
 
 export const Colors = {
   primary: '#007bff',
