@@ -12,9 +12,9 @@ Este projeto foi desenvolvido como parte do **Global Solution** na [FIAP](https:
 
 | Nome                        | RM      | Turma   | GitHub                                          | Foto                                          |
 |-----------------------------|---------|---------|-------------------------------------------------|-----------------------------------------------|
-| **Arthur Bispo de Lima**     | 557568  | 1TDSPV  | [GitHub Arthur](https://github.com/ArthurBispo00?tab=repositories) | ![Arthur Bispo](https://drive.google.com/uc?export=view&id=1qkq69PTvJU6VSS_cWNDiyknRQSCBUakg) |
-| **João Paulo Moreira**       | 557808  | 1TDSPV  | [GitHub João Paulo](https://github.com/joao1015?tab=repositories) | ![João Paulo](https://drive.google.com/uc?export=view&id=1wxoVt-5v4ifCAGZHkINnNNZuMXSqowpz) |
-| **Paulo André Carminati**    | 557881  | 1TDSPZ  | [GitHub Paulo André](https://github.com/carmipa) | ![Paulo André](https://drive.google.com/uc?export=view&id=19bA5l9huX-K2Kkr7uHWHl4tjGjR6ssSZ) |
+| **Arthur Bispo de Lima**     | 557568  | 2TDSPV  | [GitHub Arthur](https://github.com/ArthurBispo00?tab=repositories) | ![Arthur Bispo](https://drive.google.com/uc?export=view&id=1qkq69PTvJU6VSS_cWNDiyknRQSCBUakg) |
+| **João Paulo Moreira**       | 557808  | 2TDSPV  | [GitHub João Paulo](https://github.com/joao1015?tab=repositories) | ![João Paulo](https://drive.google.com/uc?export=view&id=1wxoVt-5v4ifCAGZHkINnNNZuMXSqowpz) |
+| **Paulo André Carminati**    | 557881  | 2TDSPZ  | [GitHub Paulo André](https://github.com/carmipa) | ![Paulo André](https://drive.google.com/uc?export=view&id=19bA5l9huX-K2Kkr7uHWHl4tjGjR6ssSZ) |
 - Faculdade: FIAP – Análise e Desenvolvimento de Sistemas
 - Startup parceir: **MetaMind**
 
